@@ -1,0 +1,81 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #333;
+    color: white;
+    padding: 15px 20px;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Menu */
+.menu {
+    display: flex;
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu a {
+    color: white;
+    padding: 8px 12px;
+    transition: background 0.3s;
+}
+
+.menu a:hover {
+    background: #555;
+    border-radius: 5px;
+}
+
+/* Menu Hamburguer */
+.menu-toggle {
+    font-size: 30px;
+    display: none;
+    cursor: pointer;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #333;
+        width: 200px;
+        text-align: center;
+    }
+
+    .menu li {
+        padding: 10px;
+        border-bottom: 1px solid #444;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+}
